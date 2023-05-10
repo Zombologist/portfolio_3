@@ -1,0 +1,113 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	box-sizing: border-box;
+}
+
+html, body, div, img {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* html, body {
+	overflow-y: hidden;
+} */
+
+body {
+	height: 100vh;
+	background: fixed;
+	background-color: #EEEEEE;
+	overflow-y: hidden;
+}
+
+.navlist {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+}
+
+.navlist li {
+	list-style-type: none;
+}
+
+.navlist li a {
+	display: block;
+	padding: 0.5rem;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.1rem;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif";
+}
+
+.navlist li a:hover {
+	background-color: #EEEEEE;
+	color: #B04759;
+}
+
+.main-body {
+	height: calc(91% - 2rem); /* calc(87.25% - 2.5rem); */
+	margin: 1rem 0 1rem 1rem;
+	overflow-y: scroll;
+}
+
+nav {
+	display: block;
+	height: 5.5%; /* 7.75%; */
+	width: 100%;
+	background-color: #B04759;
+}
+
+footer {
+	background-color: #E08E6D;
+	height: 3.5%; /* 5%; */
+	width: 100%;
+	clear: both;
+	font: x-small;
+	font-weight: bold;
+	/* position: fixed; */
+	/* bottom: 0; */
+}
+
+.recent-news,
+.old-news {
+	float: left;
+	width: 100%;
+	background-color: #99A98F;
+}
+
+aside {
+	float: right;
+	margin: 1rem 1rem 0 1rem;
+	/* height: calc(); */
+	width: 25%;
+	background-color: #569DAA; /* #537188; */
+	overflow-y: auto;
+}
+
+/* delete aside from list to set custom height directly to element? */
+.recent-news,
+.old-news,
+aside {
+	height: 100%;
+}
+
+.news-item h1, p {
+	width: calc(100% - 1rem); 
+	margin: 0.5rem; /* value doesn't match height but looks better this way? */
+}
+
+aside h1, p {
+	width: calc(100% - 1rem);
+	margin: 0.5rem; /* same effect for .news-item despite being independent of it */
+}
+
+/* news-item define height, read more link, use CMS? */
